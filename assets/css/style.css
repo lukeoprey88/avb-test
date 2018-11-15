@@ -1,0 +1,261 @@
+/*  PSD width = 1278 */
+
+/* LOAD FONTS*/
+@font-face {
+    font-family: Tungsten-Medium;
+    src: url("../fonts/Tungsten/Tungsten-Medium.otf") format("opentype");
+}
+@font-face {
+    font-family: Tungsten-Semibold;
+    src: url("../fonts/Tungsten/Tungsten-Semibold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: MyriadPro-Regular;
+    src: url("../fonts/MyriadPro/MyriadPro-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: MyriadPro-Light;
+    src: url("../fonts/MyriadPro/MyriadPro-Light.otf") format("opentype");
+}
+@font-face {
+    font-family: MyriadPro-Bold;
+    src: url("../fonts/MyriadPro/MyriadPro-Bold.otf") format("opentype");
+}
+
+/* GENERAL STYLES */
+body {
+	background-color: #201b26;
+}
+.hide {
+	display: none;
+}
+.overlay{
+	background-color: #000000;
+}
+a {
+	color: #f3f4f4;
+	text-decoration: none;
+	
+	/* Subtle CSS effects */
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+	
+}
+a:hover {
+	color: #e73446;
+}
+
+nav ul li {
+	display: inline-block;
+}
+nav ul li:nth-child(1) {
+	padding-left: 0;
+}
+nav ul li:nth-last-child(1) {
+	border-right: 0px solid #201b26;
+}
+
+
+h1, h2 {
+	font-family: Tungsten-Medium;
+	text-transform: uppercase;
+	max-width: 25rem; /* 400px */
+	font-size: 6rem;
+    line-height: 82%;
+}
+
+
+/* SPECIFIC CONTENT STYLES */
+header, .content, footer {
+
+	font-family: MyriadPro-Regular;
+	/*max-width: calc(79.875rem - 9.375rem); /* 1278 - 150 */
+	color: #f3f4f4;
+	padding: 0 4.6875rem; /*75px */
+	
+}
+
+header {
+
+	background-image: url('../images/background.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 27rem;
+	padding-top: 3.75rem /* 60px */
+	
+}
+
+header .brand-name {
+	display: none;
+
+}
+	header .navButton {
+		width: 16px;
+		position: absolute;
+		top: 19px;
+		right: 10px;
+	}
+
+	.sub-navigation {
+		padding-top: 0.1875rem; /* 3px */
+	}
+	.sub-navigation ul li {
+		border-right: 1px solid #e73446;
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+	.main-navigation {
+		padding-left: 300px;
+		position: relative;
+	}
+	
+		.main-navigation > ul {
+			position: absolute;
+			top: 0;
+		}
+		.main-navigation > ul > li {
+			float: left;
+			display: block;
+			width: 205px;
+		}
+		
+		.main-navigation a {
+			margin-bottom: 1rem;
+			display: block;
+		}
+				
+		/* sub columns */
+		.main-navigation ul li ul li {
+			display: block;
+		}
+	
+		.main-navigation .page-name {
+			font-family: Tungsten-Medium;
+			font-size: 2rem;
+			text-transform: uppercase;
+		}
+		.main-navigation ul li span {
+			display: block;
+		}
+
+.content {
+	margin-top: -20rem;
+}
+
+	.content .columns {
+		overflow: hidden;
+	}
+		.content .columns .column{
+			width: 46%;
+			padding-right: 4%;
+			/*max-width: calc(30rem - 2.8125rem);*/
+			/*padding-right: 2.8125rem; /* 45px */ 
+			float: left;
+		}
+		
+		.content .columns .column:nth-child(even){
+			padding-right: 0;
+		}
+		
+	.content h1 {
+		padding-bottom: 3.4375rem; /* 55px */
+	}
+	.content h2 {
+		color: #e73446;
+		padding-bottom: 5.625rem; /* 90px */
+	}
+	.content p {
+		font-family: MyriadPro-Light;
+		padding-bottom: 1.875rem; /* 30px */
+		line-height: 1.2rem;
+	}
+
+footer {
+	padding-bottom: 1.5625rem;
+	border-bottom: 0.75rem solid #e73446; /* 12px */
+	
+}
+
+	.copyright {
+		padding-top: 1.5625rem; /* 25px */
+		padding-bottom: 1.5625rem; /* 25px */
+	}
+	
+	footer ul li {
+		border-right: 1px solid #f3f4f4;
+		padding-left: 0.5rem; /* 8px */
+		padding-right: 0.5rem;
+	}
+	
+/* tablet */
+@media only screen and (max-width: 660px) {
+	header, .content, footer{
+		padding-left: 2.6875rem;
+		padding-right: 2.6875rem;
+	}
+}	
+
+/* mobile */
+@media only screen and (max-width: 420px) {
+	
+	.main-navigation {
+		padding-left: 0;
+	}
+	.main-navigation ul li {
+		display: block;
+	}
+	
+		.main-navigation > ul > li {
+			width: 100%;
+		}
+		.main-navigation a{
+			margin-bottom: 0.625rem
+		}
+	
+	.main-navigation a span {
+		text-align: center;
+		padding-bottom: 0.625rem; /* 10px */
+	}
+	
+	h1, h2 {
+		font-size: 4rem;
+		text-align: center;
+	}
+	
+	.content .columns .column {
+	
+		float: none;
+		width: 100%;
+		text-align: center;
+	
+	}
+	
+	.copyright {
+		text-align: center;
+	}
+	
+	footer ul li {
+		display: block;
+		border: 0;
+		text-align: center;
+		padding-bottom: 0.3125rem; /* 5px */
+	}
+	
+	.footer-navigation {
+		padding-bottom: 0.625rem;
+	}
+	
+} 
+	
+	/* menu overlay 92% opacity*/
+	/* color: #201b26*/
+
+	/* could be used as SASS variables*/
+	/* first title = #f3f4f4*/
+	/* second title / menu hover = #e73446*/
+	
+	
