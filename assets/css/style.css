@@ -1,6 +1,5 @@
-/*  PSD width = 1278 */
+/* FONTS*/
 
-/* LOAD FONTS*/
 @font-face {
     font-family: Tungsten-Medium;
     src: url("../fonts/Tungsten/Tungsten-Medium.otf") format("opentype");
@@ -73,7 +72,6 @@ h1, h2 {
 header, .content, footer {
 
 	font-family: MyriadPro-Regular;
-	/*max-width: calc(79.875rem - 9.375rem); /* 1278 - 150 */
 	color: #f3f4f4;
 	padding: 0 4.6875rem; /*75px */
 	
@@ -94,10 +92,39 @@ header .brand-name {
 
 }
 	header .navButton {
-		width: 16px;
+		width: 30px;
 		position: absolute;
-		top: 19px;
-		right: 10px;
+		top: 55px;
+		right: 60px;
+		background: none;
+		color: inherit;
+		border: none;
+		padding: 0;
+		font: inherit;
+		cursor: pointer;
+		outline: inherit;
+		z-index: 100;
+	}
+	
+	.navButton span {
+		width: 30px;
+		height: 2px;
+		background-color: black;
+		margin: 0px 0 5px;
+		display: block;
+	}
+	
+	button.navButton.burger.close {
+		font-size: 2rem;
+		width: auto;
+		top: 45px;
+		right: 65px;
+	}
+	.navButton.close:before {
+		content: "x";
+	}
+	.navButton.close span{
+		display: none;
 	}
 
 	.sub-navigation {
@@ -111,6 +138,7 @@ header .brand-name {
 	.main-navigation {
 		padding-left: 300px;
 		position: relative;
+		z-index: 100;
 	}
 	
 		.main-navigation > ul {
@@ -191,6 +219,17 @@ footer {
 		padding-right: 0.5rem;
 	}
 	
+div.overlay {
+  opacity:    0.92; 
+  background: #000; 
+  width:      100%;
+  height:     100%; 
+  z-index:    10;
+  top:        0; 
+  left:       0; 
+  position:   fixed; 
+}
+	
 /* tablet */
 @media only screen and (max-width: 660px) {
 	header, .content, footer{
@@ -204,6 +243,7 @@ footer {
 	
 	.main-navigation {
 		padding-left: 0;
+		z-index: 100;
 	}
 	.main-navigation ul li {
 		display: block;
@@ -224,6 +264,14 @@ footer {
 	h1, h2 {
 		font-size: 4rem;
 		text-align: center;
+	}
+	
+	button.navButton.burger {
+		z-index: 100;
+		right: 20px;
+	}
+	button.navButton.burger.close {
+		right: 25px;
 	}
 	
 	.content .columns .column {
@@ -250,12 +298,5 @@ footer {
 	}
 	
 } 
-	
-	/* menu overlay 92% opacity*/
-	/* color: #201b26*/
 
-	/* could be used as SASS variables*/
-	/* first title = #f3f4f4*/
-	/* second title / menu hover = #e73446*/
-	
 	
